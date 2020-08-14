@@ -81,7 +81,7 @@ export default class App extends React.Component {
           <div
             className={this.state.theme === "light" ? "App-light" : "App-dark"}
           >
-            <p>Hello world Test2!</p>
+            <p>Hello world Test3!</p>
             <p>My token is: {this.Authentication.state.token}</p>
             <p>My opaque ID is {this.Authentication.getOpaqueId()}.</p>
             <div>
