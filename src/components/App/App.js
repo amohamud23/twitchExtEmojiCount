@@ -1,3 +1,10 @@
+/*
+
+start extension ==> npm run start
+=> runs at https://www.twitch.tv/zbeucler/about
+
+*/
+
 import React from "react";
 import Authentication from "../../util/Authentication/Authentication";
 
@@ -14,6 +21,9 @@ export default class App extends React.Component {
       finishedLoading: false,
       theme: "light",
       isVisible: true,
+      kappaCount: 0,
+      pogChampCount: 0,
+      triHardCount: 0,
     };
   }
 
@@ -74,14 +84,61 @@ export default class App extends React.Component {
     }
   }
 
+  updateCounts() {
+    // if used with an api
+    // send a GET REQUEST to API for each emote
+    // update state
+    // EX: Kappa
+    // let APIKappa = API response (lets say its 5)
+    /* if (this.state.kappaCount != APIKappa){
+        this.setState(kappaCount: APIKappa);
+    }
+    // idk if this will work
+    */
+  }
+
   render() {
     if (this.state.finishedLoading && this.state.isVisible) {
       return (
+        <div
+          className={this.state.theme === "light" ? "App-light" : "App-dark"}
+        >
+          <div className="App">
+            <h2>Emote Counter</h2>
+            <div className="col-1">
+              <img src={require("../../../public/images/kappa.png")} />
+              <p>{this.state.kappaCount}</p>
+            </div>
+            <div className="col-2">
+              <img src={require("../../../public/images/pogChamp.png")} />
+              <p>{this.state.pogChampCount}</p>
+            </div>
+            <div className="col-3">
+              <img src={require("../../../public/images/triHard.png")} />
+              <p>{this.state.triHardCount}</p>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
         <div className="App">
+          <h1>Loading...</h1>
+        </div>
+      );
+    }
+  }
+}
+
+/* 
+
+twitch place holders: 
+
+
           <div
             className={this.state.theme === "light" ? "App-light" : "App-dark"}
           >
-            <p>Hello world Test2!</p>
+            <p>Hello world!</p>
             <p>My token is: {this.Authentication.state.token}</p>
             <p>My opaque ID is {this.Authentication.getOpaqueId()}.</p>
             <div>
@@ -102,10 +159,7 @@ export default class App extends React.Component {
               .
             </p>
           </div>
-        </div>
-      );
-    } else {
-      return <div className="App"></div>;
-    }
-  }
-}
+
+
+
+*/

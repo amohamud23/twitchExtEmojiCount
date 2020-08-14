@@ -1,11 +1,55 @@
 .App {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-.App-light{
-    color:#232127;
+.App-light {
+  color: #232127;
 }
 
-.App-dark{
-    color:#e5e3e8;
+.App-dark {
+  color: #e5e3e8;
+}
+
+.col-1 {
+  float: left;
+  width: 30%;
+  background-color: darkslategrey;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding-bottom: 15%;
+  padding-top: 5%;
+  color: grey;
+  margin: 0 0.5% 0 0.5%;
+}
+.col-2 {
+  display: inline-block;
+  width: 30%;
+  background-color: darkslategrey;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding-bottom: 15%;
+  padding-top: 5%;
+  color: grey;
+  margin: 0 0.5% 0 0.5%;
+}
+.col-3 {
+  float: right;
+  width: 30%;
+  background-color: darkslategrey;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding-bottom: 15%;
+  padding-top: 5%;
+  color: grey;
+  margin: 0 0.5% 0 0.5%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+h2 {
+  color: grey;
 }
