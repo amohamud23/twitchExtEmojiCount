@@ -138,7 +138,9 @@ twitch place holders:
           <div
             className={this.state.theme === "light" ? "App-light" : "App-dark"}
           >
+
             <p>Hello world!</p>
+
             <p>My token is: {this.Authentication.state.token}</p>
             <p>My opaque ID is {this.Authentication.getOpaqueId()}.</p>
             <div>
